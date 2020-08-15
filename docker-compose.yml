@@ -1,0 +1,40 @@
+version: "3.8"
+services:
+    service-socks:
+        image: microtsocks:latest
+        container_name: microtsocks
+        # environment: 
+           #- SOCKS_CONNECTIONS=1
+           # local_port:destination_host:destination_port
+           # ISD_MAINFRAME
+           # - SOCKS_1=10013:192.168.248.116:10013  
+        restart: always   
+        networks: 
+            - service-net
+        ports: 
+            - "1080:1080"
+            - "3128:3128"
+        volumes:
+            - source: ./tsocks.conf
+              target: /etc/tsocks.conf
+              type: bind 
+
+    bcpf-core:
+       image: bcpf-core:1.0
+       container_name: bcpf-core
+       environment: 
+           - JVM_ARGS=-Dhttp.nonProxyHosts="localhost|127.0.0.1|192.168.1*" -DsocksProxyHost=service-socks  -DsocksProxyPort=1080
+       restart: always
+       networks: 
+           - service-net
+       ports: 
+           - "9080:9080"
+       volumes:
+           - type: bind
+             source: ./suportedbdc_config
+             target: /opt/suportedbdc_config       
+       
+networks:
+     service-net:
+         driver: bridge
+
