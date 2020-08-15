@@ -2,7 +2,7 @@ version: "3.8"
 services:
     service-socks:
         image: gregoriomomm/multsocks:latest
-        container_name: microtsocks
+        container_name: multsocks
         # To tunnel ports to localhost
         # environment: 
            #- SOCKS_CONNECTIONS=1
