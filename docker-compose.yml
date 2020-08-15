@@ -7,7 +7,7 @@ services:
            #- SOCKS_CONNECTIONS=1
            # local_port:destination_host:destination_port
            # ISD_MAINFRAME
-           # - SOCKS_1=10013:192.168.248.116:10013  
+           # - SOCKS_1=10013:192.168.248.1:10013  
         restart: always   
         networks: 
             - service-net
