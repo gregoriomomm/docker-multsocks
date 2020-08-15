@@ -1,7 +1,7 @@
 version: "3.8"
 services:
     service-socks:
-        image: microtsocks:latest
+        image: gregoriomomm/multsocks:latest
         container_name: microtsocks
         # environment: 
            #- SOCKS_CONNECTIONS=1
