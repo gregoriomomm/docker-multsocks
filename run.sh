@@ -20,5 +20,5 @@ echo "Starting http proxy!!!"
 tsocks ncat -l --proxy-type http localhost 3128 & 
 
 echo "Starting socks over socks..."
-tsocks /microsocks/microsocks 
+tsocks /multsocks/microsocks 
 
