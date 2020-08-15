@@ -31,7 +31,7 @@ docker-compose up
 ```
 
 ```bash
-docker run -v path/tsocks.conf:/etc/tsocks.conf -p 3128:3128 -p 1080:1080  greogoriomomm/microtsocks:latest 
+docker run -v path/tsocks.conf:/etc/tsocks.conf -p 3128:3128 -p 1080:1080  greogoriomomm/multsocks:latest 
 ```
 
 Example: 
