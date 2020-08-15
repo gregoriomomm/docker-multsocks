@@ -5,7 +5,7 @@ RUN  apt install -qy build-essential git
 
 RUN mkdir /src 
 WORKDIR /src  
-RUN git clone https://github.com/rofl0r/microsocks.git
+RUN git clone https://github.com/gregoriomomm/microsocks
 WORKDIR /src/microsocks 
 RUN  make 
 
