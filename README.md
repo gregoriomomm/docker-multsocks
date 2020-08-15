@@ -15,15 +15,21 @@ default_pass = password
 
 and check if the tsocks.conf is pointing to the correct path inside docker-compose.yml and run by using : 
 
+
 ```bash
-docker run -v path/tsocks.conf:/etc/tsocks.conf -p 3128:3128 docker-htsp:latest 
+docker-compose up 
+```
+
+```bash
+docker run -v path/tsocks.conf:/etc/tsocks.conf -p 3128:3128 -p 1080:1080  greogoriomomm/microtsocks:latest 
 ```
 
 Example: 
 
 [Java](https://docs.oracle.com/javase/7/docs/technotes/guides/net/proxies.html): 
 ```
-export JVM_ARGS='-Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=3128 -Dhttp.nonProxyHosts="localhost|127.0.0.1|host.example.com"'
+export JVM_ARGS='-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttp.nonProxyHosts="localhost|127.0.0.1|host.example.com"'
+export JVM_ARGS='-DsocksProxyHost=localhost -DsocksProxyPort=1080'
 ```
 
 Unix:
