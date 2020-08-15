@@ -1,5 +1,15 @@
 # Docker MulTSOCKS to HTTP and SOCKS5 chaining to SOCKS5 PROXY
 
+It provides a way (as multiplatform as Docker is) to connect to a HTTP PROXY standard protocol 
+to get to a SOCKS5 server with advanced route configuration, which is not readly provided 
+by all softwares for free, like in Windows, which you can configure a simples HTTP proxy 
+locally (see configuration at bottom). 
+
+It can also be use in this case, for many applications, like some java implementations
+that can connect to SOCKS but are not enabled to correctly pass the user and password
+to authenticate SOCKS connection, so it can act as a SOCKS without authentiction chaining 
+to an authenticated SOCKS.
+
 References: 
 [tsocks](http://manpages.ubuntu.com/manpages/bionic/man8/tsocks.8.html)
 [ncat](http://manpages.ubuntu.com/manpages/bionic/en/man1/ncat.1.html)
