@@ -1,11 +1,9 @@
-# Docker SOCKS without auth to SOCKS5 PROXY
-# and    HTTP to SOCKS5 PROXY
+# Docker MulTSOCKS to HTTP and SOCKS5 chaining to SOCKS5 PROXY
 
 References: 
 [tsocks](http://manpages.ubuntu.com/manpages/bionic/man8/tsocks.8.html)
 [ncat](http://manpages.ubuntu.com/manpages/bionic/en/man1/ncat.1.html)
-
-microsocks
+[microsocks](https://github.com/rofl0r/microsocks)
 
 Adjust the [tsocks.conf](http://manpages.ubuntu.com/manpages/bionic/man5/tsocks.conf.5.html) replacing the variables by your user name and password, 
 and other configurations related to your SOCKS5 paths: 
