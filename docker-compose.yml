@@ -19,20 +19,16 @@ services:
               target: /etc/tsocks.conf
               type: bind 
 
-#    bcpf-core:
-#       image: bcpf-core:1.0
-#       container_name: bcpf-core
+#    other-service:
+#       image: other-service:1.0
+#       container_name: other-service
 #       environment: 
 #           - JVM_ARGS=-Dhttp.nonProxyHosts="localhost|127.0.0.1|192.168.1*" -DsocksProxyHost=service-socks  -DsocksProxyPort=1080
 #       restart: always
 #       networks: 
 #           - service-net
 #       ports: 
-#           - "9080:9080"
-#       volumes:
-#           - type: bind
-#             source: ./suportedbdc_config
-#             target: /opt/suportedbdc_config       
+#           - "9080:9080"     
        
 networks:
      service-net:
