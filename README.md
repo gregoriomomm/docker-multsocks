@@ -38,8 +38,8 @@ Example:
 
 [Java](https://docs.oracle.com/javase/7/docs/technotes/guides/net/proxies.html): 
 ```
-export JVM_ARGS='-Djava.net.preferipv4stack=true -Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttp.nonProxyHosts="localhost|127.0.0.1|host.example.com"'
-export JVM_ARGS='-Djava.net.preferipv4stack=true -DsocksProxyHost=localhost -DsocksProxyPort=1080'
+export JVM_ARGS='-Djava.net.preferIPv4Stack=true -Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttp.nonProxyHosts="localhost|127.0.0.1|host.example.com"'
+export JVM_ARGS='-Djava.net.preferIPv4Stack=true -DsocksProxyHost=localhost -DsocksProxyPort=1080'
 ```
 
 Unix:
